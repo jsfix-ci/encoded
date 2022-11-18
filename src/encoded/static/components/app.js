@@ -134,7 +134,7 @@ Title.propTypes = {
 
 // Get the current browser cookie from the DOM.
 function extractSessionCookie() {
-    return cookie.get('session');
+    return JSON.parse(cookie.get('session'));
 }
 
 

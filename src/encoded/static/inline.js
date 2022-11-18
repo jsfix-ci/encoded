@@ -1,7 +1,7 @@
 // Read and clear stats cookie
 const cookie = require('js-cookie');
 
-window.stats_cookie = cookie.get('X-Stats') || '';
+window.stats_cookie = JSON.parse(cookie.get('X-Stats')) || '';
 cookie.set('X-Stats', '', { path: '/', expires: new Date(0) });
 
 // Use a separate tracker for dev / test
